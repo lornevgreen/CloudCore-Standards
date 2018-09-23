@@ -5,20 +5,23 @@ Coding standards for CloudCoin software.
 
 Here is the list of directories to be used when handling CloudCoin files:
 
-- Bank
-- Counterfeit
-- Export
-- Fracked
-- Import
-- Imported
-- Logs
-- Suspect
-- Templates
-- Trash
+```
+Bank\
+Counterfeit\
+Detected\
+Export\
+Fracked\
+Import\
+Imported\
+Logs\
+Suspect\
+Templates\
+Trash\
+```
 
 Each folder has a specific use, and should not be used in any other way than instructed here. These standards must be upheld to ensure proper file management. Here is the lifecycle of a CloudCoin moving through the CloudCore:
 
-**Import**: The Import folder is where the CloudCore system will find new CloudCoins. These files will be read by CloudCore, separated into individual files, and then moved to the *Suspect* folder and copied to the *Imported* folder.
+**Import**: The Import folder is where the CloudCore system will find new CloudCoins. These files will be converted into individual JSON files, and then moved to the *Suspect* folder and copied to the *Imported* folder.
 
 **Imported**: The Imported folder holds copies of CloudCoins before they are separated or authenticated. The CloudCoins in this folder will not be used.
 
@@ -34,8 +37,21 @@ Each folder has a specific use, and should not be used in any other way than ins
 
 **Lost**: The Lost folder holds CloudCoins which do not have enough RAIDA responses and cannot be repaired.
 
+**Export**: The Export folder holds files that contain any amount of CloudCoins in any supported file. These files will be converted into JSON files when imported back into a program.
+
 **Templates**: The Templates folder holds images that will be used when exporting CloudCoins as jpeg files.
 
 **Trash**: The Trash folder holds CloudCoins with unsupported file extensions or invalid data. The CloudCoins in this folder will not be used.
 
 **Logs**: The Logs folder holds text records of all activity in the CloudCore.
+
+### Deprecated Folders
+
+These folders were in use in older programs, namely Founders 1.0:
+
+```
+Dangerous\
+Partial\
+Predetect\
+Language\
+```
