@@ -6,17 +6,37 @@ Coding standards for CloudCoin software.
 Here is the list of directories to be used when handling CloudCoin files:
 
 ```
-Bank\
-Counterfeit\
-Detected\
-Export\
-Fracked\
-Import\
-Imported\
-Logs\
-Suspect\
-Templates\
-Trash\
+|-CloudCoin\
+| |--  Accounts\
+| | |-[##########]
+      Bank\
+      Commands\
+        Backuper\
+        DirectoryMonitor\
+        Echoer\
+        Eraser\
+        Exporter\
+        Minder\
+        ShowCoins\
+        Vaulter\     
+      Counterfeit\
+      Detected\
+      Export\
+        Email
+        PayForward
+        Sent
+      Fracked\
+      Gallery\
+      Import\
+        Waiting\
+      Imported\
+      Logs\
+      Lost\
+      Suspect\
+      Templates\
+      Trash\
+      config.txt
+      status.txt
 ```
 
 Each folder has a specific use, and should not be used in any other way than instructed here. These standards must be upheld to ensure proper file management. Here is the lifecycle of a CloudCoin moving through the CloudCore:
