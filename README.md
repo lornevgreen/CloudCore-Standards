@@ -45,6 +45,18 @@ Each folder has a specific use, and should not be used in any other way than ins
 
 **Logs**: The Logs folder holds text records of all activity in the CloudCore.
 
+### CloudCoin Lifecycle
+
+Here is a list of the common CloudCoin features and how they move CloudCoins:
+
+**Import CloudCoins**: This feature will import and clean a CloudCoin. It may come from a file, a JSON text, or the "Import" folder. Some programs will import any type of CloudCoin, where others may import only .stack files. A copy of the input file is kept in the "Suspect" folder, and the imported file is placed in the "Detected" folder. Some programs may automatically begin the Detection process.
+
+**Detection CloudCoins**: Also known as Authenticating CloudCoins. This will take coins from either the "Suspect" folder, or from a JSON text. The program will authenticate the CloudCoins with the RAIDA nodes, update its results, then place it in the "Detected" folder. Some programs may automatically begin the Grading process.
+
+**Grading CloudCoins**: Also known as Sorting CloudCoins. This will take coins from the "Detected" folder, and move them into a new folder depending on its results. The possible folders are "Bank", "Fracked", "Counterfeit", "Lost". The rules are explained in the folder descriptions.
+
+**Exporting CloudCoins**: Also known as Withdrawing CloudCoins. This will take coins from the "Bank" folder and withdraw them in a variety of formats: .stack files, .jpg images, .csv files, or JSON text. A copy of these files may be placed in the "Export" folder.
+
 ### Deprecated Folders
 
 These folders were in use in older programs, namely Founders 1.0:
